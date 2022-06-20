@@ -1,23 +1,13 @@
-import logo from './logo.svg';
 import './App.css';
+import NavBar from './Components/Header/NavBar';
+import Input from './Components/Input';
 
 function App() {
+  const logeoConsola = (a)=>console.log(a);
+  logeoConsola("Componente Padre")
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://youtu.be/_b5V1wchZJU"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NavBar logeo={logeoConsola}/>
     </div>
   );
 }

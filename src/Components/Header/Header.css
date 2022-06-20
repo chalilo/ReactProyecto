@@ -1,0 +1,38 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+header{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: flex-start;
+    color: #fafafa;
+    background-color: #444;
+    padding: 10px;
+}
+img{
+    height: 100px;
+    margin-right: 10px;
+}
+#brand{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    width: 80vw;
+    margin: 10px 10vw;
+}
+#dropMenu{
+    display: flex;
+    flex-flow: row wrap;
+    text-align: center;
+    align-items: stretch;
+    justify-content: flex-start;
+    margin: 0 auto 10px 10vw ;
+}
+#shoppingCart{
+    margin: 0px 10vw 10px auto;
+}
+
+@media screen and (max-width:480px) {
+}
