@@ -30,8 +30,23 @@ img{
     justify-content: flex-start;
     margin: 0 auto 10px 10vw ;
 }
-#shoppingCart{
+#cartWidget{
     margin: 0px 10vw 10px auto;
+}
+#cartWidget a{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    border-bottom: solid 2px #fafafa;
+    color: #fafafa;
+    text-decoration: none;
+}
+#cartWidget a>svg{
+    margin-right: 5px;
+}
+#cartWidget a>p{
+    margin: 0;
 }
 
 @media screen and (max-width:480px) {

@@ -1,9 +1,8 @@
 import './Header.css';
 import logoTienda from './../../logo.svg';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import * as bootstrap from 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { grey } from '@mui/material/colors';
+import CartWidget from './CartWidget';
 
 
 const NavBar = ({ logeo }) => {
@@ -24,7 +23,7 @@ const NavBar = ({ logeo }) => {
                     <li><a class="dropdown-item" href="https://www.youtube.com/">Herramientas</a></li>
                 </ul>
             </div>
-            <a href="https://www.youtube.com/" id='shoppingCart'><ShoppingCartIcon fontSize='large' sx={{ color: grey[50] }}/></a>
+            <CartWidget/>
         </header>
     );
 }
