@@ -12,7 +12,7 @@ function App() {
       <NavBar logeo={logeoConsola}/>
       {/* <Input name='Nombre' id='nombreValor' title='Tu nombre'/> */}
       {/* <MiComponente miProp="Contador" logeoB={logeoConsola}/> */}
-      <ItemListContainer/>
+      <ItemListContainer greeting="Lista de items"/>
     </div>
   );
 }
