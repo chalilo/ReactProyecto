@@ -1,0 +1,28 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.itemCount{
+    border: solid 1px black;
+    width: fit-content;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+.itemCount>button{
+    width: 100%;
+}
+.countChanger{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+.countChanger button{
+    min-width: 100px;
+}
+.countChanger p{
+    margin: auto 20px;
+}

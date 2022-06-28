@@ -3,10 +3,10 @@ import { grey } from '@mui/material/colors';
 
 
 const CartWidget = () => {
-    let contenidoCarro = 0;
+    let contadorCarrito = 0;
     return(
         <div id="cartWidget">
-            <a href="https://www.youtube.com/"><ShoppingCartIcon fontSize='large' sx={{ color: grey[50] }}/><p>{contenidoCarro}</p></a>
+            <a href="https://www.youtube.com/"><ShoppingCartIcon fontSize='large' sx={{ color: grey[50] }}/><p>{contadorCarrito}</p></a>
         </div>
         )
 }

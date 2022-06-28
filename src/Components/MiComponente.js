@@ -1,35 +1,43 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const MiComponente = ({miProp,logeoB}) => {
     const [contador, setContador] = useState(0);
-    const [users,setUsers] = useState([{name:"Camilo"},{name:"Felix"}])
+    const [numero,setNumero] = useState(0);
+    const [categoria,setCategoria] = useState("todo");
+    const [show,setShow] = useState(true);
 
-    const handlerClickPos = () =>{
-        setContador(contador + 1)
-        logeoB("Se sumo")
-    }
-    const handlerClickNeg = () =>{
-        setContador(contador - 1)
-        logeoB("Se resto")
+    useEffect(() => {
+        logeoB("Se ejecuta el useEffect");
+        setNumero(numero + 1)
+    },[contador])
+
+    const handlerClickSR = (a) =>{
+        setContador(contador + (1 * a))
     }
     const handlerClickRestart = () =>{
         setContador(0)
-        logeoB("Se reinicio")
     }
-    const handlerAgregar = () =>{
-        const Jose = {name:"Jose"}
-        console.log(users);
-        setUsers([...users,Jose]);
-        console.log(users);
+    const cambiarCat = (a) =>{
+        a == 0 && setCategoria("Cuerdas de guitarra")
+        a == 1 && setCategoria("Cuerdas de bajo")
+        a == 2 && setCategoria("Herramientas")
     }
     return(
         <>
             <h1>{miProp}</h1>
             <h3>{contador}</h3>
-            <button onClick={handlerClickPos}>Sumar</button>
-            <button onClick={handlerClickNeg}>Restar</button>
+            <button onClick={() => handlerClickSR(1)}>Sumar</button>
+            <button onClick={() =>handlerClickSR(-1)}>Restar</button>
             <button onClick={handlerClickRestart}>Reiniciar</button>
-            <button onClick={handlerAgregar}>Agregar Jose</button>
+            <h2>{numero}</h2>
+            <h2>Categoria: {categoria}</h2>
+            <button onClick={()=>cambiarCat(0)}>Cuerdas de guitarra</button>
+            <button onClick={()=>cambiarCat(1)}>Cuerdas de bajo</button>
+            <button onClick={()=>cambiarCat(2)}>Herramientas</button><br/>
+            {show
+                ? <h2>Oculto</h2>
+                : <h2>Visible</h2>}
+            <button onClick={()=> setShow(!show)}>a</button>
         </>
     )
 }
