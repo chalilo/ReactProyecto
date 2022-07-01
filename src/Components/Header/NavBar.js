@@ -5,8 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import CartWidget from './CartWidget';
 
 
-const NavBar = ({ logeo }) => {
-    logeo("Componente hijo")
+const NavBar = (/*{ logeo }*/) => {
     return (
         <header>
             <div id='brand'>

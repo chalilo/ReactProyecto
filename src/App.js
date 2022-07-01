@@ -6,11 +6,11 @@ import ItemListContainer from './Components/ItemListContainer';
 import ItemCount from './Components/ItemCount';
 
 function App() {
-  const logeoConsola = (a)=>console.log(a);
-  logeoConsola("Componente Padre")
+  /*const logeoConsola = (a)=>console.log(a);
+  logeoConsola("Componente Padre")*/
   return (
     <div className="App">
-      <NavBar logeo={logeoConsola}/>
+      <NavBar /*logeo={logeoConsola}*//>
       {/* <Input name='Nombre' id='nombreValor' title='Tu nombre'/> */}
       <ItemListContainer greeting="Lista de items"/>
       {/* {<MiComponente miProp="Contador" logeoB={logeoConsola}/>} */}

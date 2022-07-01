@@ -1,9 +1,10 @@
 import { Children } from "react";
 import ItemCount from "./ItemCount";
 import "./ItemListContainer.css"
+import ItemList from "./ItemList";
 
 const ItemListContainer = ({greeting}) => {
-    return(
+    /*return(
         <div id="listaItems">
             <h2>{greeting}</h2>
             <div className="item">
@@ -17,6 +18,9 @@ const ItemListContainer = ({greeting}) => {
                 <ItemCount stock={3} initial={1}/>
             </div>
         </div>
+    )*/
+    return(
+        <ItemList/>
     )
 }
 
