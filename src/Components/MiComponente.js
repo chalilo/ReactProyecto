@@ -1,13 +1,13 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, Component } from "react";
 
-const MiComponente = ({miProp,logeoB}) => {
+/*const MiComponente = ({miProp}) => {
     const [contador, setContador] = useState(0);
     const [numero,setNumero] = useState(0);
     const [categoria,setCategoria] = useState("todo");
     const [show,setShow] = useState(true);
 
     useEffect(() => {
-        logeoB("Se ejecuta el useEffect");
+        console.log("Se ejecuta el useEffect");
         setNumero(numero + 1)
     },[contador])
 
@@ -46,6 +46,34 @@ const array = [0,1,2];
 
 const [cero,uno,dos] = array;
 
-console.log(cero,uno,dos);
+console.log(cero,uno,dos);*/
+
+const MiComponente = () =>{
+    function SuperButton({buttonText}) {
+        function doSomething(){
+            console.log("Hello World");
+        }
+        return <button type="button" onClick={doSomething}>{buttonText}</button>
+    }
+    function SuperForm(props) {
+        console.log(props);
+        return(
+            <>
+            <h1>{props.title}</h1>
+            {props.render({buttonText: "a"})}
+            </>
+        )
+    }
+    const StateApp=()=>{
+        const state = "Esta funcion morira al finalizar"
+        return <p>{state}</p>
+    }
+    return(
+        <>
+        <SuperForm title="Bon voyage" render={SuperButton}/>
+        <StateApp/>
+        </>
+    )
+}
 
 export default MiComponente;

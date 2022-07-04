@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import "./ItemCount.css"
 
-const ItemCount = ({stock,initial}) => {
+const ItemCount = ({stock,initial,onAdd}) => {
     const [itemCantidad,setItemCantidad] = useState(initial);
     const [stockVirt,setStock] = useState(stock);
     const itemCountSuma = () =>{
@@ -19,18 +19,24 @@ const ItemCount = ({stock,initial}) => {
         }
     }
     const itemCountAdd =() =>{
-        setStock(stockVirt - itemCantidad)
+        setStock(stockVirt - itemCantidad);
+        if (itemCantidad != 0){
+            onAdd(itemCantidad)
+        } else{
+            onAdd("NADA")
+        }
     }
     useEffect(()=>{
         if (stockVirt == 0){
             setItemCantidad(0)
             console.log("No queda mas stock");
-        } else if(stockVirt >= initial){
+        }else if(itemCantidad <= stockVirt){
+            setItemCantidad(itemCantidad)
+        }else if(stockVirt >= initial && itemCantidad > initial){
             setItemCantidad(initial)
-            console.log("Todavia queda stock");
         }else {
             setItemCantidad(1)
-            console.log("Queda poco stock");
+            console.log("Queda poco stock (menos del 10%)");
         }
     },[stockVirt])
     return(
