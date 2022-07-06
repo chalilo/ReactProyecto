@@ -48,7 +48,7 @@ const [cero,uno,dos] = array;
 
 console.log(cero,uno,dos);*/
 
-const MiComponente = () =>{
+const MiComponente = () =>{/*
     function SuperButton({buttonText}) {
         function doSomething(){
             console.log("Hello World");
@@ -73,7 +73,10 @@ const MiComponente = () =>{
         <SuperForm title="Bon voyage" render={SuperButton}/>
         <StateApp/>
         </>
-    )
+    )*/
+    /*const resultado = fetch("https://jsonplaceholder.typicode.com/users")
+    .then((res)=>res.json())
+    .then((data)=>console.log(data));*/
 }
 
 export default MiComponente;
