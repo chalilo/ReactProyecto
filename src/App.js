@@ -4,18 +4,25 @@ import NavBar from './Components/Header/NavBar';
 import MiComponente from './Components/MiComponente';
 import ItemListContainer from './Components/Items/ItemListContainer';
 import ItemDetailContainer from './Components/Items/ItemDetailContainer';
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
 
 function App() {
   /*const logeoConsola = (a)=>console.log(a);
   logeoConsola("Componente Padre")*/
   return (
-    <div className="App">
-      <NavBar /*logeo={logeoConsola}*//>
-      {/* <Input name='Nombre' id='nombreValor' title='Tu nombre'/> */}
-      <ItemListContainer greeting="Lista de items"/>
-      <ItemDetailContainer/>
-      <MiComponente/>
-    </div>
+    <BrowserRouter>
+      <NavBar/>
+      <Routes>
+        <Route path='/' element={<ItemListContainer greeting={"Lista de Items"}/>}/>
+        <Route path='/category/:categoryId' element={<ItemListContainer greeting={"Lista de Items"}/>}/>
+        <Route path='/item/:itemId' element={<ItemDetailContainer/>}/>
+        <Route path='/cart' element=''/>
+      </Routes>
+    </BrowserRouter>
   );
 }
 

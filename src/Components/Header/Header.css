@@ -14,7 +14,6 @@ header{
 }
 img{
     height: 100px;
-    margin-right: 10px;
 }
 #brand{
     display: flex;
@@ -22,6 +21,9 @@ img{
     align-items: center;
     width: 80vw;
     margin: 10px 10vw;
+}
+#brand h1{
+    margin-left: 10px;
 }
 #dropMenu{
     display: flex;

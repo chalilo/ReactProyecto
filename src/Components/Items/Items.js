@@ -1,5 +1,6 @@
 const Items = [{
     "id": 0,
+    "categoryId":"guitarra",
     "title": "Cuerdas Ernie Ball Regular Slinky 10",
     "price": 9000,
     "pictureURL": "https://ruizcustomguitars.com/wp-content/uploads/2019/11/P02221.png",
@@ -10,6 +11,7 @@ const Items = [{
 },
 {
     "id": 1,
+    "categoryId":"bajo",
     "title": "Cuerdas Ernie Ball Regular Slinky 45 BASS",
     "price": 31000,
     "pictureURL": "https://ruizcustomguitars.com/wp-content/uploads/2019/11/P02221.png",
@@ -20,7 +22,8 @@ const Items = [{
 },
 {
     "id": 2,
-    "title": "Cuerdas Ernie Ball clasica nylon Enesto Palla",
+    "categoryId":"guitarra",
+    "title": "Cuerdas Ernie Ball clasica nylon Ernesto Palla",
     "price": 6500,
     "pictureURL": "https://ruizcustomguitars.com/wp-content/uploads/2019/11/P02409-510x510.png",
     "alt": "Imagen de cuerdas para guitarra de 6 cuerdas clasica Ernie Ball de nylon",

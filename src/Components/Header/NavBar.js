@@ -3,13 +3,19 @@ import logoTienda from './../../logo.svg';
 import * as bootstrap from 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import CartWidget from './CartWidget';
+import { Link } from 'react-router-dom';
 
 
 const NavBar = (/*{ logeo }*/) => {
+    const categories = [
+        {name:"Cuerdas de guitarra",id:0,route:"/category/guitarra"},
+        {name:"Cuerdas de bajo",id:1,route:"/category/bajo"},
+        {name:"Herramientas",id:2,route:"/category/herramientas"}
+    ]
     return (
         <header>
             <div id='brand'>
-                <img src={logoTienda} alt="Logo de la tienda" />
+                <Link to={"/"}><img src={logoTienda} alt="Logo de la tienda" /></Link>
                 <h1>Chalilo Encordado</h1>
             </div>
             <div class="dropdown" id='dropMenu'>
@@ -17,12 +23,10 @@ const NavBar = (/*{ logeo }*/) => {
                     Categorias
                 </button>
                 <ul class="dropdown-menu dropdown-menu-dark bg-secondary" aria-labelledby="dropdownMenuButton1">
-                    <li><a class="dropdown-item" href="https://www.youtube.com/">Cuerdas de guitarra</a></li>
-                    <li><a class="dropdown-item" href="https://www.youtube.com/">Cuerdas de bajo</a></li>
-                    <li><a class="dropdown-item" href="https://www.youtube.com/">Herramientas</a></li>
+                    {categories.map((category) => <Link key={category.id} to={category.route} class="dropdown-item">{category.name}</Link>)}
                 </ul>
             </div>
-            <CartWidget/>
+            <Link to={"/cart"}><CartWidget/></Link>
         </header>
     );
 }

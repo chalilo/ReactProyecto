@@ -1,3 +1,4 @@
+import { useParams } from "react-router-dom";
 import ItemCount from "./ItemCount";
 import "./ItemDetail.css"
 
