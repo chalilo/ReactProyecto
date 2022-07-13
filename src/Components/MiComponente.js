@@ -48,7 +48,7 @@ const [cero,uno,dos] = array;
 
 console.log(cero,uno,dos);*/
 
-const MiComponente = () =>{/*
+/*const MiComponente = () =>{
     function SuperButton({buttonText}) {
         function doSomething(){
             console.log("Hello World");
@@ -76,7 +76,35 @@ const MiComponente = () =>{/*
     )*/
     /*const resultado = fetch("https://jsonplaceholder.typicode.com/users")
     .then((res)=>res.json())
-    .then((data)=>console.log(data));*/
-}
+    .then((data)=>console.log(data));
+}*/
+const MiComponente = ()=>{
+    const evento = (a)=>{
+        console.log("Se logea: "+a);
+    }
+    const handlerChange = (e)=>{
+        e.preventDefault();
+        console.log(e.target.value);
+    }
+    const submit= (e)=>{
+        e.preventDefault();
+        const value = document.getElementById("fName").value;
+        value ? console.log(value) : console.log("String vacia");;
+    }
+    const clickDelDiv= ()=>{
+        console.log("a");
+    }
 
+    return(
+        <div onClick={clickDelDiv}>
+        <button type="button" onClick={()=>evento(45)}>Logear</button>
+        <input type="text" onChange={handlerChange}/>
+        <form action="">
+            <label htmlFor="fName">First Name:</label>
+            <input type="text" name="fName" id="fName"></input>
+            <button type="submit" onClick={submit}>Enviar</button>
+        </form>
+        </div>
+    )
+}
 export default MiComponente;

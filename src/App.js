@@ -2,8 +2,10 @@ import './App.css';
 import NavBar from './Components/Header/NavBar';
 //import Input from './Components/Input';
 import MiComponente from './Components/MiComponente';
+import Usuarios from './Components/Usuarios';
 import ItemListContainer from './Components/Items/ItemListContainer';
 import ItemDetailContainer from './Components/Items/ItemDetailContainer';
+import Cart from './Components/Cart';
 import {
   BrowserRouter,
   Routes,
@@ -20,8 +22,10 @@ function App() {
         <Route path='/' element={<ItemListContainer greeting={"Lista de Items"}/>}/>
         <Route path='/category/:categoryId' element={<ItemListContainer greeting={"Lista de Items"}/>}/>
         <Route path='/item/:itemId' element={<ItemDetailContainer/>}/>
-        <Route path='/cart' element=''/>
+        <Route path='/cart' element={<Cart/>}/>
       </Routes>
+      {/* <MiComponente/> */}
+      {/* <Usuarios/> */}
     </BrowserRouter>
   );
 }

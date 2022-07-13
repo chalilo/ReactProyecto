@@ -1,9 +1,15 @@
+import { useState } from "react";
 import { useParams } from "react-router-dom";
 import ItemCount from "./ItemCount";
 import "./ItemDetail.css"
+import { Link } from "react-router-dom";
 
 const ItemDetail = ({ item }) => {
+    const [finalizado,setFinalizado] = useState(false)
+    const [itemsAgregados,setItemsAgregados] = useState(0)
     const onAdd = (cantidad) => {
+        setFinalizado(true)
+        setItemsAgregados(cantidad)
         console.log("SE AGREGO " + cantidad);
     }
     return (
@@ -13,7 +19,8 @@ const ItemDetail = ({ item }) => {
                 <h3>{item.title}</h3>
                 <p>${item.price}</p>
                 <p>{item.description}</p>
-                <ItemCount stock={item.stock} initial={item.initial} onAdd={onAdd} />
+                
+                {!finalizado ? <ItemCount stock={item.stock} initial={item.initial} onAdd={onAdd} /> : <Link to="/cart" id="finalizarCompra">Finalizar compra</Link>}
             </div>
         </div>
     )

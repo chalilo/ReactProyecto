@@ -11,7 +11,6 @@ const ItemDetailContainer = () => {
     const [vistaDetail, setVistaDetail] = useState(false)
     const {itemId} = useParams()
     const item = Items.find(item => item.id == itemId)
-    console.log(item);
     const task = new Promise((res) => {
         setTimeout(() => res(item), 2000)
     }).then(() => setVistaDetail(true))
