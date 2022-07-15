@@ -1,5 +1,6 @@
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { grey } from '@mui/material/colors';
+import { contexto } from '../Contexto';
 
 
 const CartWidget = () => {

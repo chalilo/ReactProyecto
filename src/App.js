@@ -6,6 +6,7 @@ import Usuarios from './Components/Usuarios';
 import ItemListContainer from './Components/Items/ItemListContainer';
 import ItemDetailContainer from './Components/Items/ItemDetailContainer';
 import Cart from './Components/Cart';
+import Contexto from './Components/Contexto'
 import {
   BrowserRouter,
   Routes,
@@ -17,15 +18,15 @@ function App() {
   logeoConsola("Componente Padre")*/
   return (
     <BrowserRouter>
-      <NavBar/>
-      <Routes>
-        <Route path='/' element={<ItemListContainer greeting={"Lista de Items"}/>}/>
-        <Route path='/category/:categoryId' element={<ItemListContainer greeting={"Lista de Items"}/>}/>
-        <Route path='/item/:itemId' element={<ItemDetailContainer/>}/>
-        <Route path='/cart' element={<Cart/>}/>
-      </Routes>
-      {/* <MiComponente/> */}
-      {/* <Usuarios/> */}
+      <Contexto >
+        <NavBar />
+        <Routes>
+          <Route path='/' element={<ItemListContainer greeting={"Lista de Items"} />} />
+          <Route path='/category/:categoryId' element={<ItemListContainer greeting={"Lista de Items"} />} />
+          <Route path='/item/:itemId' element={<ItemDetailContainer />} />
+          <Route path='/cart' element={<Cart />} />
+        </Routes>
+      </Contexto>
     </BrowserRouter>
   );
 }

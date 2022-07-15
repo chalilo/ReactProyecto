@@ -1,9 +1,13 @@
 import { useEffect, useState } from "react"
 import "./ItemCount.css"
+import { useContext } from "react";
+import { contexto } from "../Contexto";
 
-const ItemCount = ({stock,initial,onAdd}) => {
+const ItemCount = ({item,stock,initial,onAdd}) => {
     const [itemCantidad,setItemCantidad] = useState(initial);
     const [stockVirt,setStock] = useState(stock);
+    const resultado = useContext(contexto)
+    const { carrito, agregarACarrito} = resultado
     const itemCountSuma = () =>{
         if (itemCantidad < stockVirt){
             setItemCantidad(itemCantidad + 1)
@@ -21,6 +25,7 @@ const ItemCount = ({stock,initial,onAdd}) => {
     const itemCountAdd =() =>{
         setStock(stockVirt - itemCantidad);
         if (itemCantidad != 0){
+            agregarACarrito(item,itemCantidad)
             onAdd(itemCantidad)
         } else{
             onAdd("NADA")
