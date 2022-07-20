@@ -1,4 +1,4 @@
-import { createContext, useState } from "react"
+import { createContext, useEffect, useState } from "react"
 
 export const contexto = createContext([]);
 const { Provider } = contexto;
@@ -7,15 +7,16 @@ const Contexto = ({ children }) => {
     const [carrito, alterarCarrito] = useState([]);
 
     const agregarACarrito = (itemA,cantidad) => {
-        alterarCarrito([...carrito,])
         if (estaEnCarrito(itemA.id)){
-            let itemEnCarro = carrito.find(item=>item.id == itemA.id)
-            itemEnCarro.qty = cantidad + itemEnCarro.qty
-            const carritoFiltrado = carrito.filter(item=>item.id !== itemA.id)
-            alterarCarrito([...carritoFiltrado,itemEnCarro])
-            console.log(carrito);
+            const carritoAlterado = carrito.map(obj =>{
+                if (obj.id === itemA.id){
+                    obj.qty = obj.qty + cantidad
+                    return obj
+                } else return obj
+            })
+            alterarCarrito([...carritoAlterado]);
         } else{
-            let itemAAgregar = {id: itemA.id, name: itemA.title, qty: cantidad}
+            let itemAAgregar = {id: itemA.id, name: itemA.title, qty: cantidad, priceUnit: itemA.price, pictureURL : itemA.pictureURL}
             alterarCarrito([...carrito,itemAAgregar])
         }
     }
@@ -25,9 +26,8 @@ const Contexto = ({ children }) => {
     }
 
     const estaEnCarrito = (itemId) => {
-        return carrito.find(item => item.id == itemId);
+        return carrito.some(item => item.id == itemId);
     }
-
     const clear =()=>{
         alterarCarrito([])
     }

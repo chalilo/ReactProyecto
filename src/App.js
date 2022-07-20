@@ -25,6 +25,7 @@ function App() {
           <Route path='/category/:categoryId' element={<ItemListContainer greeting={"Lista de Items"} />} />
           <Route path='/item/:itemId' element={<ItemDetailContainer />} />
           <Route path='/cart' element={<Cart />} />
+          <Route path='/testing' element={<MiComponente/>} />
         </Routes>
       </Contexto>
     </BrowserRouter>

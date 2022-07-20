@@ -18,12 +18,12 @@ const NavBar = (/*{ logeo }*/) => {
                 <Link to={"/"}><img src={logoTienda} alt="Logo de la tienda" /></Link>
                 <h1>Chalilo Encordado</h1>
             </div>
-            <div class="dropdown" id='dropMenu'>
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+            <div className="dropdown" id='dropMenu'>
+                <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                     Categorias
                 </button>
-                <ul class="dropdown-menu dropdown-menu-dark bg-secondary" aria-labelledby="dropdownMenuButton1">
-                    {categories.map((category) => <Link key={category.id} to={category.route} class="dropdown-item">{category.name}</Link>)}
+                <ul className="dropdown-menu dropdown-menu-dark bg-secondary" aria-labelledby="dropdownMenuButton1">
+                    {categories.map((category) => <Link key={category.id} to={category.route} className="dropdown-item">{category.name}</Link>)}
                 </ul>
             </div>
             <Link to={"/cart"}><CartWidget/></Link>
