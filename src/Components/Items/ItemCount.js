@@ -26,9 +26,8 @@ const ItemCount = ({item,stock,initial,onAdd}) => {
         setStock(stockVirt - itemCantidad);
         if (itemCantidad != 0){
             agregarACarrito(item,itemCantidad)
-            onAdd(itemCantidad)
+            onAdd()
         } else{
-            onAdd("NADA")
         }
     }
     useEffect(()=>{

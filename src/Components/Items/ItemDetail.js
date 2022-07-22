@@ -6,11 +6,8 @@ import { Link } from "react-router-dom";
 
 const ItemDetail = ({ item }) => {
     const [finalizado,setFinalizado] = useState(false)
-    const [itemsAgregados,setItemsAgregados] = useState(0)
-    const onAdd = (cantidad) => {
+    const onAdd = () => {
         setFinalizado(true)
-        setItemsAgregados(cantidad)
-        console.log("SE AGREGO " + cantidad);
     }
     return (
         <div id="itemDisplay">

@@ -78,7 +78,7 @@ console.log(cero,uno,dos);*/
     .then((res)=>res.json())
     .then((data)=>console.log(data));
 }*/
-const MiComponente = ()=>{
+const MiComponente = ()=>{/*
     const evento = (a)=>{
         console.log("Se logea: "+a);
     }
@@ -105,6 +105,6 @@ const MiComponente = ()=>{
             <button type="submit" onClick={submit}>Enviar</button>
         </form>
         </div>
-    )
+    )*/
 }
 export default MiComponente;
