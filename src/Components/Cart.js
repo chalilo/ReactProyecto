@@ -26,6 +26,7 @@ const Cart = () => {
                     </div>)}
                 <p>Precio total: ${costoCompra}</p>
                 <button onClick={()=>clear()}>Vaciar carrito</button>
+                <Link to="/checkout"><button>Finalizar compra</button></Link>
             </>
         )
     } else{

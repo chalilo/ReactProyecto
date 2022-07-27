@@ -6,6 +6,7 @@ import Usuarios from './Components/Usuarios';
 import ItemListContainer from './Components/Items/ItemListContainer';
 import ItemDetailContainer from './Components/Items/ItemDetailContainer';
 import Cart from './Components/Cart';
+import Checkout from './Components/Checkout';
 import Contexto from './Components/Contexto'
 import {
   BrowserRouter,
@@ -25,7 +26,8 @@ function App() {
           <Route path='/category/:categoryId' element={<ItemListContainer greeting={"Lista de Items"} />} />
           <Route path='/item/:itemId' element={<ItemDetailContainer />} />
           <Route path='/cart' element={<Cart />} />
-          <Route path='/testing' element={<MiComponente/>} />
+          <Route path='/testing' element={<MiComponente />} />
+          <Route path='/checkout' element={<Checkout />}/>
         </Routes>
       </Contexto>
     </BrowserRouter>

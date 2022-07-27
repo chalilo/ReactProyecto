@@ -8,7 +8,7 @@ const firebaseConfig = {
     storageBucket: "chalilo-ecommerce.appspot.com",
     messagingSenderId: "730562972919",
     appId: "1:730562972919:web:77dd77753293d1bfaa97f2"
-};
+}
 
 const app = initializeApp(firebaseConfig);
 export const db = getFirestore(app);
