@@ -1,13 +1,13 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore ,getDocs, collection, query} from "firebase/firestore";
+import { getFirestore} from "firebase/firestore";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyBoUO_d4yTssEXpRgIfCO2clT4l-NLLEns",
-    authDomain: "chalilo-ecommerce.firebaseapp.com",
-    projectId: "chalilo-ecommerce",
-    storageBucket: "chalilo-ecommerce.appspot.com",
-    messagingSenderId: "730562972919",
-    appId: "1:730562972919:web:77dd77753293d1bfaa97f2"
+    apiKey: process.env.REACT_APP_apiKey,
+    authDomain: process.env.REACT_APP_authDomain,
+    projectId: process.env.REACT_APP_projectId,
+    storageBucket: process.env.REACT_APP_storageBucket,
+    messagingSenderId: process.env.REACT_APP_messagingSenderId,
+    appId: process.env.REACT_APP_appId
 }
 
 const app = initializeApp(firebaseConfig);

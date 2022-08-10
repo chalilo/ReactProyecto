@@ -1,10 +1,10 @@
-import Items from "./Items";
 import { db } from "../firebase/firebase";
 import { doc, getDoc, collection } from "firebase/firestore";
 import ItemDetail from "./ItemDetail";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import LoadingAnim from "../LoadingAnim/LoadingAnim";
+import "./ItemDetailContainer.css"
 
 const ItemDetailContainer = () => {
     const [vistaDetail, setVistaDetail] = useState(false)
@@ -20,8 +20,8 @@ const ItemDetailContainer = () => {
     })
 
     return (
-        <div>
-            <h2>Item Detail</h2>
+        <div id="itemDetailContainer">
+            <h2>Detalle de item</h2>
             {vistaDetail
                 ? <ItemDetail item={item}/>
                 : <LoadingAnim/>}

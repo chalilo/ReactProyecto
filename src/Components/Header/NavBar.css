@@ -10,7 +10,6 @@ header{
     color: #fafafa;
     background-color: #444;
     padding: 10px;
-    margin-bottom: 20px;
 }
 img{
     height: 100px;
@@ -33,10 +32,13 @@ img{
     justify-content: flex-start;
     margin: 0 auto 10px 10vw ;
 }
-#cartWidget{
-    margin: 0px 10vw 10px auto;
+#cartLink{
+    margin-right: 10px;
+    text-decoration: none;
 }
-#cartWidget a{
+
+#cartWidget{
+    margin: 10px 10vw;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -45,12 +47,10 @@ img{
     color: #fafafa;
     text-decoration: none;
 }
-#cartWidget a>svg{
+#cartWidget svg{
     margin-right: 5px;
 }
-#cartWidget a>p{
+#cartWidget p{
     margin: 0;
-}
-
-@media screen and (max-width:480px) {
+    font-weight: bold;
 }

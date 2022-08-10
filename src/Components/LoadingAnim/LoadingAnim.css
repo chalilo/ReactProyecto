@@ -1,3 +1,10 @@
+.loadingSpin{
+    display: flex;
+    flex-flow: column wrap;
+    min-width: 100%;
+    padding-top: 20px;
+    align-items: center;
+}
 .lds-spinner {
     color: official;
     display: inline-block;

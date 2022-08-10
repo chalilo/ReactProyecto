@@ -3,26 +3,35 @@
     margin: 0;
 }
 .itemCount{
-    border: solid 1px black;
-    width: fit-content;
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
-    margin: auto;
+    width: 100%;
 }
 .itemCount>button{
     width: 100%;
+    margin-top: 5px;
+}
+.itemCount button{
+    background-color: #444;
+    color: #fafafa;
+    border: 3px solid #a01c4b;
+    border-radius: 10px;
+}
+.itemCount button:hover{
+    background-color: #fafafa;
+    color: #a01c4b;
 }
 .countChanger{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: flex-start;
-}
-.countChanger button{
-    min-width: 100px;
+    display: grid;
+    grid-template-columns: 1fr 28px 1fr;
+    grid-template-rows: 28px;
+    gap: 5px;
+    width: 100%;
+    height: auto;
 }
 .countChanger p{
-    margin: auto 20px;
+    text-align: center;
+    font-weight: bold;
 }

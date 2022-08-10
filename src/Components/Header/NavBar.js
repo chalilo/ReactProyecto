@@ -1,4 +1,4 @@
-import './Header.css';
+import './NavBar.css';
 import logoTienda from './../../logo.svg';
 import * as bootstrap from 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -26,7 +26,7 @@ const NavBar = (/*{ logeo }*/) => {
                     {categories.map((category) => <Link key={category.id} to={category.route} className="dropdown-item">{category.name}</Link>)}
                 </ul>
             </div>
-            <Link to={"/cart"}><CartWidget/></Link>
+            <CartWidget/>
         </header>
     );
 }

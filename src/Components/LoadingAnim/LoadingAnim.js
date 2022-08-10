@@ -2,7 +2,7 @@ import "./LoadingAnim.css"
 
 const LoadingAnim = () => {
     return (
-        <div className="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+        <div className="loadingSpin"><div className="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div>
     )
 }
 

@@ -1,7 +1,5 @@
 import { useState } from "react";
-import { useParams } from "react-router-dom";
 import ItemCount from "./ItemCount";
-import "./ItemDetail.css"
 import { Link } from "react-router-dom";
 
 const ItemDetail = ({ item }) => {
@@ -12,7 +10,7 @@ const ItemDetail = ({ item }) => {
     return (
         <div id="itemDisplay">
             <img src={item.pictureURL} alt={item.alt} />
-            <div id="itemDetails">
+            <div id="itemDetail">
                 <h3>{item.title}</h3>
                 <p>${item.price}</p>
                 <p>{item.description}</p>

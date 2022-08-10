@@ -1,4 +1,4 @@
-import { createContext, useEffect, useState } from "react"
+import { createContext, useState, useEffect } from "react"
 
 export const contexto = createContext([]);
 const { Provider } = contexto;
@@ -6,6 +6,18 @@ const { Provider } = contexto;
 const Contexto = ({ children }) => {
     const [carrito, alterarCarrito] = useState([]);
 
+    let itemsEnCarrito = 0;
+    if (carrito.length >= 1) {
+        carrito.forEach(obj => {
+            itemsEnCarrito = itemsEnCarrito + obj.qty
+        });
+    }
+    useEffect(() => {
+        itemsEnCarrito += ([carrito.map(obj => obj.qty)]).reduce((a, b) => {
+            return a + b;
+        }, 0)
+    }, [carrito])
+    
     const agregarACarrito = (itemA,cantidad) => {
         if (estaEnCarrito(itemA.id)){
             const carritoAlterado = carrito.map(obj =>{
@@ -26,13 +38,13 @@ const Contexto = ({ children }) => {
     }
 
     const estaEnCarrito = (itemId) => {
-        return carrito.some(item => item.id == itemId);
+        return carrito.some(item => item.id === itemId);
     }
     const clear =()=>{
         alterarCarrito([])
     }
     return (
-        <Provider value={{ carrito, agregarACarrito, eliminarDeCarrito, clear}}>
+        <Provider value={{ carrito, agregarACarrito, eliminarDeCarrito, clear, itemsEnCarrito}}>
             {children}
         </Provider>
     )
