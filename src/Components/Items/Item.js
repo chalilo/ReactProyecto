@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 const Item = ({item}) =>{
-    const URL = "/item/"+item.id;
+    const URL = "/ReactProyecto"+"/item/"+item.id;
     return(
         <div>
             <h4>{item.title}</h4>

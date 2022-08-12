@@ -32,7 +32,7 @@ const ItemList = () => {
     return (
         <div id="itemList">{vistaItems
             ? (productos.length >= 1 ? productos.map(i => <div className="itemDisplay" key={i.id}><Item item={i} /></div>)
-            : <Link to="/" id="categoriaVacia">Categoria vacia, revisa el resto de nuestra tienda</Link>)
+            : <Link to="/ReactProyecto" id="categoriaVacia">Categoria vacia, revisa el resto de nuestra tienda</Link>)
             : <LoadingAnim />
         }
         </div>

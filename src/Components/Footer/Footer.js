@@ -6,7 +6,7 @@ const Footer = () => {
     return(
         <footer>
         <p>Chalilo Encordado</p>
-        <Link to='/'><img src={logoTienda} alt='Logo de tienda'/></Link>
+        <Link to='/ReactProyecto'><img src={logoTienda} alt='Logo de tienda'/></Link>
         </footer>
     )
 }

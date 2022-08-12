@@ -18,11 +18,11 @@ function App() {
       <Contexto >
         <NavBar />
         <Routes>
-          <Route path='/' element={<ItemListContainer greeting={"Lista de Items"} />} />
-          <Route path='/category/:categoryId' element={<ItemListContainer greeting={"Lista de Items"} />} />
-          <Route path='/item/:itemId' element={<ItemDetailContainer />} />
-          <Route path='/cart' element={<Cart />} />
-          <Route path='/checkout' element={<Checkout />} />
+          <Route path='/ReactProyecto' element={<ItemListContainer greeting={"Lista de Items"} />} />
+          <Route path='/ReactProyecto/category/:categoryId' element={<ItemListContainer greeting={"Lista de Items"} />} />
+          <Route path='/ReactProyecto/item/:itemId' element={<ItemDetailContainer />} />
+          <Route path='/ReactProyecto/cart' element={<Cart />} />
+          <Route path='/ReactProyecto/checkout' element={<Checkout />} />
         </Routes>
         <Footer />
       </Contexto>

@@ -15,7 +15,7 @@ const NavBar = (/*{ logeo }*/) => {
     return (
         <header>
             <div id='brand'>
-                <Link to={"/"}><img src={logoTienda} alt="Logo de la tienda" /></Link>
+                <Link to={"/ReactProyecto"}><img src={logoTienda} alt="Logo de la tienda" /></Link>
                 <h1>Chalilo Encordado</h1>
             </div>
             <div className="dropdown" id='dropMenu'>
@@ -23,7 +23,7 @@ const NavBar = (/*{ logeo }*/) => {
                     Categorias
                 </button>
                 <ul className="dropdown-menu dropdown-menu-dark bg-secondary" aria-labelledby="dropdownMenuButton1">
-                    {categories.map((category) => <Link key={category.id} to={category.route} className="dropdown-item">{category.name}</Link>)}
+                    {categories.map((category) => <Link key={category.id} to={"/ReactProyecto"+category.route} className="dropdown-item">{category.name}</Link>)}
                 </ul>
             </div>
             <CartWidget/>

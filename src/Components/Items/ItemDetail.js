@@ -15,7 +15,7 @@ const ItemDetail = ({ item }) => {
                 <p>${item.price}</p>
                 <p>{item.description}</p>
                 
-                {!finalizado ? <ItemCount item={item} stock={item.stock} initial={item.initial} onAdd={onAdd} /> : <Link to="/cart" id="finalizarCompra">Finalizar compra</Link>}
+                {!finalizado ? <ItemCount item={item} stock={item.stock} initial={item.initial} onAdd={onAdd} /> : <Link to="/ReactProyecto/cart" id="finalizarCompra">Finalizar compra</Link>}
             </div>
         </div>
     )
