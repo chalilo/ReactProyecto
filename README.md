@@ -20,10 +20,6 @@ Para llevar a cabo el desarrollo del proyecto utilice diferentes librerias que h
 
 Tambien como recurso extra utilice una animacion de CSS para visualizar la carga de contenido.
 
-## Consideracion
-
-Si alguien decide correr una build de este proyecto, no va a funcionar debido a la falta del archivo .env
-
 ## Recorrido de compra
 
 <
