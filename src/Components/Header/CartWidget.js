@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 const CartWidget = () => {
     let { carrito, itemsEnCarrito } = useContext(contexto);
     return (
-        <Link to="/cart" id='cartLink'>
+        <Link to="/ReactProyecto/cart" id='cartLink'>
             <div id="cartWidget" style={{ display: !(carrito.length >= 1) ? "none" : "flex" }}>
                 <ShoppingCartIcon fontSize='large' sx={{ color: grey[50] }} /><p>{itemsEnCarrito}</p>
             </div>

@@ -49,7 +49,7 @@ const Cart = () => {
                 <p>Precio total: ${costoCompra}</p>
                 <div id="cartControls">
                     <button onClick={() => clear()}>Vaciar carrito</button>
-                    <Link to="/checkout"><button>Finalizar compra</button></Link>
+                    <Link to="/ReactProyecto/checkout"><button>Finalizar compra</button></Link>
                 </div>
             </div>
         )
