@@ -23,3 +23,8 @@ Tambien como recurso extra utilice una animacion de CSS para visualizar la carga
 ## Consideracion
 
 Si alguien decide correr una build de este proyecto, no va a funcionar debido a la falta del archivo .env
+
+## Recorrido de compra
+
+<
+![Simulacion de compra](funcionamiento.GIF)
